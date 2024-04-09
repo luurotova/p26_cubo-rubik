@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --verde: #1ead0b;
+    --rojo: #da1616;
+    --azul: #0909e4;
+}
+
+body{
+    background-color: rgb(20, 20, 20);
+}
+
+P{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1800px;
+    perspective-origin: 50% -50%;
+}
+
+.cube{
+    perspective: 900px;
+    transform-style: preserve-3d;
+    height: 300px;
+    width: 300px;
+}
+
+.cube__side{
+    position: absolute;
+}
+
+.cube__side--1 {
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border-radius: 7px;
+    transform: translateX(-100px) translateY(-27px) skewY(0.57turn) ;
+    transform-origin: center;
+}
+
+.cube__tile--1{
+    position: relative;
+    border:  solid black 5px;
+    background-color: var(--verde);
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+}
+
+.cube__side--2{
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border-radius: 7px;
+    transform: translateX(200px) translateY(-6px) skewY(0.45turn);
+    transform-origin: center;
+}
+
+.cube__tile--2{
+    position: relative;
+    border:  solid black 5px;
+    background-color: var(--azul);
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+}
+
+.cube__side--3 {
+    height: 215px;
+    width: 331px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border-radius: 7px;
+    transform: translateX(34px) translateY(-184px) rotate(25deg) skew(313deg);
+    transform-origin: center;
+}
+
+.cube__tile--3{
+    position: relative;
+    border:  solid black 5px;
+    background-color: var(--rojo);
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+}
+
+.cube__tile:hover{
+    border: solid #6efffa 5px;
+    cursor: pointer;
+}
